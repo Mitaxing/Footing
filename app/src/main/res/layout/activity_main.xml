@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="800px"
+        android:layout_gravity="center">
+
+        <View
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle" />
+
+        <View
+            android:layout_width="150px"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="170px"
+            android:background="@color/black" />
+
+        <View
+            android:layout_width="150px"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="170px"
+            android:background="@color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="150px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="170px"
+            android:background="@color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="150px"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="170px"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textSize="50px" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="100px"
+        android:layout_height="400px"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/video_dialog_progress_bg">
+
+        <com.kupa.footing.view.VerticalSeekBar
+            android:id="@+id/height_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="350px"
+            android:layout_gravity="center_horizontal"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="8dp"
+            android:text="0cm"
+            android:textColor="#ffffff" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="100px"
+        android:background="@drawable/video_dialog_progress_bg"
+        android:padding="16px"
+        android:textColor="#ffffff"
+        tools:text="与所测物体相距：5m" />
+
+    <TextView
+        android:id="@+id/angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="180px"
+        android:background="@drawable/video_dialog_progress_bg"
+        android:padding="16px"
+        android:textColor="#ffffff"
+        tools:text="镜头角度：30°" />
+
+</FrameLayout>
